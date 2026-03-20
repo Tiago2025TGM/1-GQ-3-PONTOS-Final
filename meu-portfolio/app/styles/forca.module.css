@@ -1,0 +1,58 @@
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.palavra {
+  font-size: 2rem;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  width: 50px;
+  text-align: center;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  background: #0070f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0055aa;
+}
+
+.vitoria {
+  color: green;
+  font-weight: bold;
+}
+
+.derrota {
+  color: red;
+  font-weight: bold;
+}
+
+/* Boneco simples */
+.forca {
+  margin-top: 20px;
+  height: 200px;
+}
+
+.boneco::before {
+  content: "🙂";
+  font-size: 50px;
+}
+
+.erro1::before { content: "😐"; }
+.erro2::before { content: "😟"; }
+.erro3::before { content: "😢"; }
+.erro4::before { content: "😨"; }
+.erro5::before { content: "😱"; }
+.erro6::before { content: "💀"; }
