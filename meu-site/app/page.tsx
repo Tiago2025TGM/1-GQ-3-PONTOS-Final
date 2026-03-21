@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -20,6 +21,10 @@ export default function Home() {
           Gosto criar projetos e jogos
           Linguagens de Programação: Pytho, C , js, html5 e CSS.
         </p>
+
+        <Link href="/forca" className="btn" style={{ marginTop: '14px', display: 'inline-block' }}>
+          Jogo da Forca
+        </Link>
       </section>
     </main>
   )
