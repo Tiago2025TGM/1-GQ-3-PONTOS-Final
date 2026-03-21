@@ -75,12 +75,18 @@ h1 {
 .forca-drawing {
   min-height: 280px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
 }
 
 .gallow {
   width: 150px;
   height: 220px;
   border-left: 7px solid #3a2921;
+  margin-left: 0;
+  margin-right: 8px;
   border-bottom: 7px solid #3a2921;
   border-top: 7px solid #3a2921;
   border-radius: 6px 6px 0 0;

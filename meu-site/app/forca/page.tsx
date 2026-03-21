@@ -110,9 +110,6 @@ export default function ForcaPage() {
                 className="forca-input"
                 aria-label="Letra"
               />
-              <button type="submit" disabled={!playing || !nextLetter.trim()} className="btn">
-                Enviar
-              </button>
             </form>
 
             <div className="keyboard" aria-label="Teclado virtual">
