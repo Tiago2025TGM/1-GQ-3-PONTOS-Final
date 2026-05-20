@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f8efe8, #fefaf7);
+  color: #2b2b2b;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 430px;
+  background: #ffffff;
+  padding: 34px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.foto {
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #e7d3c4;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.bio {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.forca-page .forca-card {
+  max-width: 960px;
+  padding: 28px;
+  background: linear-gradient(135deg, #ffffff, #f5f2ef);
+}
+
+.forca-page h1 {
+  font-size: 2rem;
+  color: #3a2a22;
+  margin-bottom: 12px;
+}
+
+.forca-status {
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: #5a3f31;
+}
+
+.forca-wrapper {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 280px 1fr;
+  align-items: start;
+}
+
+.forca-drawing {
+  min-height: 280px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.gallow {
+  width: 150px;
+  height: 220px;
+  border-left: 7px solid #3a2921;
+  margin-left: 0;
+  margin-right: 8px;
+  border-bottom: 7px solid #3a2921;
+  border-top: 7px solid #3a2921;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  margin-left: 15px;
+}
+
+.gallow::after {
+  content: "";
+  width: 80px;
+  height: 7px;
+  background: #3a2921;
+  position: absolute;
+  top: -7px;
+  left: -73px;
+}
+
+.part {
+  width: 22px;
+  height: 22px;
+  background: #3c2a23;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.2);
+  transition: all 0.18s ease;
+}
+
+.part.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.part.head {
+  top: -10px;
+  left: 11px;
+}
+
+.part.body {
+  width: 12px;
+  height: 90px;
+  border-radius: 0;
+  left: 18px;
+  top: 18px;
+  background: #3c2a23;
+}
+
+.part.left-arm,
+.part.right-arm,
+.part.left-leg,
+.part.right-leg {
+  width: 10px;
+  height: 60px;
+  background: #3c2a23;
+  border-radius: 7px;
+  transform-origin: top center;
+  opacity: 0;
+  transition: all 0.18s ease;
+}
+
+.part.left-arm {
+  top: 40px;
+  left: 5px;
+  transform: rotate(270deg) scale(0.2);
+}
+
+.part.right-arm {
+  top: 40px;
+  left: 32px;
+  transform: rotate(90deg) scale(0.2);
+}
+
+.part.left-leg {
+  top: 100px;
+  left: 8px;
+  transform: rotate(320deg) scale(0.2);
+}
+
+.part.right-leg {
+  top: 100px;
+  left: 28px;
+  transform: rotate(40deg) scale(0.2);
+}
+
+.forca-gamepanel {
+  text-align: left;
+}
+
+.forca-word {
+  margin: 16px 0;
+  font-size: 2rem;
+  letter-spacing: 0.22em;
+  font-family: "Courier New", monospace;
+}
+
+.forca-tried {
+  font-size: 0.95rem;
+  margin: 3px 0;
+}
+
+.forca-form {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0 18px;
+}
+
+.forca-input {
+  width: 120px;
+  text-transform: uppercase;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 2px solid #b79b8c;
+  outline: none;
+  font-weight: 700;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background: #6c4e38;
+  color: white;
+  font-weight: 700;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #845c47;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(30px, 1fr));
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.key {
+  min-height: 36px;
+  border-radius: 6px;
+  border: 1px solid #8c7a6f;
+  background: #f1e6dd;
+  font-weight: 700;
+  color: #3b2b22;
+}
+
+.key.used {
+  background: #d0b9a3;
+  color: #5f472f;
+}
+
+.reset-btn {
+  width: 100%;
+  margin-top: 6px;
+}
+
+@media (max-width: 840px) {
+  .forca-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .forca-drawing {
+    margin: 0 auto;
+  }
+}
